@@ -4,6 +4,20 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 module.exports = {
   packagerConfig: {
     asar: true,
+    // macOS 代码签名配置（需要 Apple Developer 账号）
+    // osxSign: {
+    //   identity: 'Developer ID Application: Your Name (TEAM_ID)',
+    //   'hardened-runtime': true,
+    //   entitlements: 'entitlements.plist',
+    //   'entitlements-inherit': 'entitlements.plist',
+    //   'signature-flags': 'library'
+    // },
+    // osxNotarize: {
+    //   tool: 'notarytool',
+    //   appleId: process.env.APPLE_ID,
+    //   appleIdPassword: process.env.APPLE_APP_SPECIFIC_PASSWORD,
+    //   teamId: process.env.APPLE_TEAM_ID
+    // }
   },
   rebuildConfig: {},
   makers: [
